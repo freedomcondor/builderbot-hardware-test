@@ -4,7 +4,7 @@ The code in this repository is meant to run on real builderbot.
 To use them, copy all the code to the builderbot
 
 ```bash
-scp * root@192.168.1.110:~
+scp -r * root@192.168.1.110:~
 ```
 where ```192.168.1.110``` is the ip address of the robot.
 
