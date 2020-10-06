@@ -24,7 +24,7 @@
           bottom_limit_switch="proximity1"
           state = "index0" />
       </sensors>
-      <params script="04_lift.lua"/>
+	  <params script="00_basic_functionality/04_lift.lua"/>
     </lua_controller>
   </controllers>
 

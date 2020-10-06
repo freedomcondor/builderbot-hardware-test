@@ -21,7 +21,7 @@
           device="ems-sens"
           voltage="voltage0" />
       </sensors>
-      <params script="05_electromagnet.lua"/>
+	  <params script="00_basic_functionality/05_electromagnet.lua"/>
     </lua_controller>
   </controllers>
 

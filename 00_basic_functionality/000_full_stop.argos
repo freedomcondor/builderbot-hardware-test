@@ -23,7 +23,7 @@
           left="anglvel0"
           right="anglvel1" />
       </sensors>
-      <params script="000_full_stop.lua"/>
+      <params script="00_basic_functionality/000_full_stop.lua"/>
     </lua_controller>
   </controllers>
 

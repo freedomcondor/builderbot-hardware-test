@@ -13,9 +13,10 @@
       <sensors>
         <builderbot_rangefinders
           implementation="default"
-          device="vcnl4000" />
+		  device="vcnl4000" 
+		  calibration="calibration/builderbot_rangefinders.xml"/>
       </sensors>
-      <params script="02_rangefinders.lua"/>
+      <params script="00_basic_functionality/02_rangefinders.lua"/>
     </lua_controller>
   </controllers>
 

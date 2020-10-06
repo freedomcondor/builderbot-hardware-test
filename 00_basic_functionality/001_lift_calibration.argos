@@ -24,7 +24,7 @@
           bottom_limit_switch="proximity1"
           state = "index0" />
       </sensors>
-      <params script="001_lift_calibration.lua"/>
+	  <params script="00_basic_functionality/001_lift_calibration.lua"/>
     </lua_controller>
   </controllers>
 

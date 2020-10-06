@@ -15,7 +15,7 @@
   <controllers>
     <lua_controller id="builderbot">
       <actuators>
-        <!--builderbot_electromagnet_system
+        <builderbot_electromagnet_system
           implementation="default"
           device="ems-actr"
           mode="index0" />
@@ -27,12 +27,14 @@
         <builderbot_lift_system
           implementation="default"
           device="las-actr"
-          distance="distance0" /-->
-        <!--builderbot_nfc implementation="default" /-->
+          distance="distance0" />
+	  <builderbot_nfc implementation="default" device="/dev/nfc" />
         <!--wifi implementation="default" /-->
       </actuators>
       <sensors>
-        <!--builderbot_camera_system implementation="default" /-->
+        <builderbot_camera_system 
+          implementation="default"
+          calibration="calibration/builderbot_camera_system.xml" />
         <builderbot_rangefinders
           implementation="default"
 		  device="vcnl4000" 
@@ -43,6 +45,7 @@
           device="dds-sens"
           left="anglvel0"
           right="anglvel1" />
+	  -->
         <builderbot_electromagnet_system
           implementation="default" 
           device="ems-sens"
@@ -54,12 +57,12 @@
           top_limit_switch="proximity0"
           bottom_limit_switch="proximity1"
           state = "index0" />
-	-->
         <builderbot_system implementation="default" />
-        <!--builderbot_nfc implementation="default" show_rays="false" /-->
         <!--wifi implementation="default" /-->
       </sensors>
-	  <params script="01_library/00_library_link.lua" 
+	  <params script="01_library/01_search.lua" 
+              default_speed = "0.025"
+              default_turn_speed = "7"
               search_random_range="0"
               obstacle_avoidance_turn="180"
               obstacle_avoidance_backup="0.05"
