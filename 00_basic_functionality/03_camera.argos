@@ -11,7 +11,10 @@
       <sensors>
         <builderbot_camera_system 
           implementation="default" 
-		  calibration="calibration/builderbot_camera_system.xml"/>
+          calibration="calibration/builderbot_camera_system.xml"
+          saveImage="saveImage/img"
+          withColor="true"
+          saturationLimit="120"/>
       </sensors>
       <params script="00_basic_functionality/03_camera.lua" />
     </lua_controller>
