@@ -6,34 +6,33 @@ meta-builderbot-support contains scripts to make sd card, read the README inside
 
 The robot has a functionality to record its vision which is default to be off.
 To enable it, add attributes to camera\_sensor in .argos file. For example:
-
 ```xml
-        <builderbot_camera_system 
-          implementation="default" 
-          save_as="saveImage/img"
-          save_raw="true"/>
+<builderbot_camera_system 
+    implementation="default" 
+    save_as="saveImage/img"
+    save_raw="true"
+/>
 ```
+## save\_as
+Attribute "save\_as" means the path you want to store the images, a number and an extension will be automatically add.
 
-1. Attribute save\_as means the path you want to store the images, a number and an extension will be automatically add.
-
-If "save\_as" is given, the robot will automatically save gray images at the given place, for example
+If "save\_as" is given, the robot will automatically save gray images at the given place. For example
 
 ```bash
-    saveImage/img0.pnm
-    saveImage/img1.pnm
-    saveImage/img2.pnm
-	...
+saveImage/img0.pnm
+saveImage/img1.pnm
+saveImage/img2.pnm
+...
 ```
+Note that in this example you have to create a saveImage folder for the robot.
 
-Note that you have to create a saveImage folder for the robot.
-
-2. Attribute save\_raw means is to save the raw data of the image buffer. If true, instead of a gray pnm file, a raw uyvy file would be saved. For example
-
+## save\_raw
+Attribute save\_raw means is to save the raw data of the image buffer. If true, instead of a gray pnm file, a raw uyvy file would be saved. For example
 ```bash
-    saveImage/img0.uyvy
-    saveImage/img1.uyvy
-    saveImage/img2.uyvy
-	...
+saveImage/img0.uyvy
+saveImage/img1.uyvy
+saveImage/img2.uyvy
+...
 ```
 
 To read the uyvy file, copy all the uyvy files back to your computer, 

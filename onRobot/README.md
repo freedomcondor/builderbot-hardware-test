@@ -34,12 +34,16 @@ There are two special pairs of files which start by 000 or 001 serves for specia
 
 ## 01\_library
 
-To be continued.
+Inside this folder are the test files for lua library.
+
+1. 00\_library\_link is to try linking the lua library and try the behavior tree
+2. 01\_search is to try the search node
+3. 02\_aim is to try the aim node
+4. 03\_full is a fully functional test for a builderbot to search, approach, and pickup/place a block according to rules.
 
 # Issues
 
 The following issue needs to be solved:
 
-1. rangefinder calibration. The calibration file seems to be lost
-2. nfc and wifi system needs to be tested
-3. when loadfile("xxx.luac"), robot system tells "size\_t size mismatch in precompiled chunk"
+1. wifi system needs to be tested
+
